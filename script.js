@@ -4,6 +4,7 @@ class Calculator {
         this.currentOperandTextElement = currentOperandTextElement
         this.clear()
     }
+    /*---FUNCTIONS---*/
     clear(){
         this.currentOperand = ''
         this.previousOperand = ''
@@ -88,7 +89,10 @@ const currentOperandTextElement = document.querySelector('[data-current-operand]
 
 
 const calculator = new Calculator(previousOperandTextElement,
-    currentOperandTextElement) 
+    currentOperandTextElement)
+
+    /* new is how you define classes in Javascript, in this case, the class is "Calculator",
+    then pass everything from your constructor into it */
     
     numberButtons.forEach(button => {
         button.addEventListener('click',() => {
@@ -115,3 +119,4 @@ const calculator = new Calculator(previousOperandTextElement,
         calculator.delete()
         calculator.updateDisplay()
       })
+      
